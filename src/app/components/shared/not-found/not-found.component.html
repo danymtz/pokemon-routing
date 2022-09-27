@@ -7,8 +7,18 @@
     <li><a routerLink="/pokedex/add">Agregar</a></li>
     <li><a routerLink="/pokedex/find">Buscar</a></li>
     <li><a routerLink="/pokedex/list">Lista</a></li>
-    <li><a routerLink="/pokedex/pokemon/1">Pokemon</a></li>
+    <li><a routerLink="/pokedex/pokemon/2">Pokemon</a></li>
 </ul>
+
+<form action="" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <label for="">User: </label>
+    <input type="text" name="user" formControlName="username"> <br><br>
+    <label for="">Password: </label>
+    <input type="password" name="password" formControlName="password"> <br>
+
+    <button [disabled]="!loginForm.valid">Login</button>
+    <div *ngIf="error" style="color:red;">{{error}}</div>
+</form>
 
 <br>
 <button (click)="login()">Login</button>

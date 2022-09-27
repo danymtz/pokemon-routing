@@ -32,13 +32,13 @@ const routes: Routes = [
       {
         path: 'pokemon/:id',
         component: PokemonComponent,
-        resolve: {
-          pokemon : PokemonResolver
-        }
+        //resolve: {
+          //pokemon : PokemonResolver
+        //}
       },
       {
         path: '**',
-        component: PokedexComponent,
+        redirectTo: 'list',
         
       }      
     ]

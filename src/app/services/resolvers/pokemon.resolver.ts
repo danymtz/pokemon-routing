@@ -10,13 +10,13 @@ import { Observable, of } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class PokemonResolver implements Resolve<boolean> {
+export class PokemonResolver implements Resolve<any> {
 
   constructor(private http: HttpClient){}
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> {
-    const pokemonOd: number = route.params['id'];
-    const url = 'https://pokeapi.co/api/v2/pokemon${pokemonId}';
+    const pokemonId: number = route.params['id'];
+    const url = `https://pokeapi.co/api/v2/pokemon/${pokemonId}`;
     return this.http.get(url);
   }
 }

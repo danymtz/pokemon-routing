@@ -23,7 +23,8 @@ export class AuthGuard implements CanActivate, CanLoad {
     route: Route,
     segments: UrlSegment[]): Observable<boolean> | Promise<boolean> | boolean {
     
-    const ACCESS: boolean = true;
+    //const ACCESS: boolean = true;
+    this.authService.showSession();
       console.log('canload: ',this.authService.auth);
       return this.authService.auth;
   }

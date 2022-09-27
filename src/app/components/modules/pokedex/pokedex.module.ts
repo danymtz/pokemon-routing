@@ -5,6 +5,7 @@ import { AddComponent } from './pages/add/add.component';
 import { FindComponent } from './pages/find/find.component';
 import { PokemonComponent } from './pages/pokemon/pokemon.component';
 import { PokedexRoutingModule } from './pokedex-routing.module';
+import { PokedexComponent } from './pages/pokedex/pokedex.component';
 
 
 
@@ -13,7 +14,8 @@ import { PokedexRoutingModule } from './pokedex-routing.module';
     ListComponent,
     AddComponent,
     FindComponent,
-    PokemonComponent
+    PokemonComponent,
+    PokedexComponent
   ],
   imports: [
     CommonModule,
